@@ -35,7 +35,11 @@ const CategoryBlog = ({ categories, notionCategories }: CategoryBlogProps) => {
 						rowGap: '10px',
 					}}
 				>
-					<Typography variant='h3' fontFamily={'cursive'} sx={{ position: 'fixed', top: '100px' }}>
+					<Typography
+						variant='h3'
+						fontFamily={'cursive'}
+						sx={{ position: 'fixed', top: '100px', marginBottom: '40px' }}
+					>
 						All Category
 					</Typography>
 					<>
@@ -45,12 +49,12 @@ const CategoryBlog = ({ categories, notionCategories }: CategoryBlogProps) => {
 						>
 							<AccordionSummary
 								expandIcon={<ArrowDropDownIcon />}
-								aria-controls='ccna-categories-content'
-								id='ccna-categories-header'
+								aria-controls='panel1-content'
+								id='panel1-content'
 							>
 								<Typography>CCNA Categories</Typography>
 							</AccordionSummary>
-							<AccordionDetails sx={{ width: '500px' }}>
+							<AccordionDetails sx={{ width: { sm: '500px', xs: '200px' } }}>
 								{categories.map(
 									item =>
 										item.label.startsWith('CCNA') && (
@@ -95,7 +99,7 @@ const CategoryBlog = ({ categories, notionCategories }: CategoryBlogProps) => {
 							>
 								<Typography>Cisco Categories</Typography>
 							</AccordionSummary>
-							<AccordionDetails sx={{ width: '500px' }}>
+							<AccordionDetails sx={{ width: { sm: '500px', xs: '200px' } }}>
 								{categories.map(
 									item =>
 										item.label.startsWith('Cisco') && (
