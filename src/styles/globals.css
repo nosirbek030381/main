@@ -1,0 +1,9 @@
+#nprogress .bar {
+	height: 4px !important;
+	z-index: 1110 !important;
+}
+
+.download:hover {
+	text-decoration: underline;
+	color: aliceblue;
+}
